@@ -6,13 +6,12 @@ module BubbleSort
   class Error < StandardError; end
   def self.bubble_sort(array)
     n = array.length
-    for i in 0..n-1
-      for j in 0..n-i-2
-        if array[j] > array[j+1]
-          # तत्वों को स्वाप करें
-          temp = array[j]
-          array[j] = array[j+1]
-          array[j+1] = temp
+    for k in 1..n-1
+      for i in 0..n-2
+        if array[i] > array[i+1]
+          temp = array[i]
+          array[i] = array[i+1]
+          array[i+1] = temp
         end
       end
     end
